@@ -32,7 +32,9 @@ img {
     <h1>Data Analytics Final Project</h1>
     <p>Here is my <a href="./Data analysis.pdf">Khan Academy data analysis unit essay</a></p>
     <h2>Dataset Information</h2>
-    <p>I used the <a href="https://www.kaggle.com/datasets/thedevastator/spotify-tracks-genre-dataset/data">Spotify Tracks Genre database from Kaggle</a> to do my analysis. This dataset contains the track ID, artist name, album name, track name, popularity, track duration, if the track is explicit, danceability, energy, key, loudness, mode, if there are spoken words, acoustics, instrumentalness, liveness, valence, beats per minute, and time signature of 114000 songs. For my research, I wanted to see if a song's duration, genre, and tempo are correlated to a song's popularity.</p>
+    <p>I used the <a href="https://www.kaggle.com/datasets/thedevastator/spotify-tracks-genre-dataset/data">Spotify Tracks Genre database from Kaggle</a> to do my analysis. This dataset contains the track ID, artist name, album name, track name, popularity, track duration, if the track is explicit, danceability, energy, key, loudness, mode, if there are spoken words, acoustics, instrumentalness, liveness, valence, beats per minute, and time signature of 114000 songs.</p>
+    <h3>Research Question:</h3>
+    <p>For my research, I wanted to see if a song's duration, genre, and tempo are correlated to a song's popularity.</p>
     <h2>Process of Analysis</h2>
     <p>I started my analysis by downloading the data set and using Python to read the CSV file. The Python code I created sorts each of the songs by its duration, genre, and tempo. It counts the frequency of songs with the same duration, genre, and tempo that have a popularity above 80%. I then used the <a href="https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html">pyplot function of the matplotlib Python library</a> to create bar graphs of my results. I rounded the tempo to the nearest beat per minute and the duration to the nearest 10 seconds to generalize the data between songs.
     <br><br>
@@ -70,6 +72,8 @@ img {
 
 <div class="container">
     <p>The most common genre is pop with a frequency of 194 songs. Based on the graph it appears that genre plays the biggest factor in the popularity of a song. The graph closely resembles an exponential function with the frequency of each genre decreasing. A song within any of the top genres is more likely to be popular than a song in a less popular one.</p>
+    <h1>Conclusion</h1>
+    <p>Based on all three graphs, there is a correlation between the duration, genre, and tempo to the popularity of a song. For the tempo, a song between 94 BPM and 130 BPM was more likely to be popular. For the duration, a song between 160 and 250 seconds was more likely to be popular. For the genre, a pop song was more likely to be popular than any other genre. These variables on their own may not provide conclusive details on whether a song will be popular, but when combined they can be used to accurately estimate the popularity of a song.</p>
 </div>
 
 <script>
