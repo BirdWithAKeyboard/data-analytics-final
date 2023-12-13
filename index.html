@@ -44,14 +44,28 @@ img {
 
 <div class="container">
     <h2>Analysis of Data</h2>
-    <p>The first graph I made compares the frequency of songs with similar a tempo and popularity above 80%. The tempo is rounded to the nearest whole number to reduce the complexity of the dataset. The graph only shows the most frequent 100 tempos.</p>
+    <h3>Graph 1:</h3>
+    <p>The first graph compares the frequency of songs with similar a tempo and popularity above 80%. The tempo is rounded to the nearest whole number to reduce the complexity of the dataset. The graph only shows the most frequent 100 tempos.</p>
 </div>
 
 <img src="./tempo.png">
 
 <div class="container">
     <p>The graph shows that the most common tempo is 120 BPM with it occurring on 42 songs above 80% popularity. The top ten most common tempos are between 94 BPM and 130 BPM which is only a difference of 36 BPM. I believe that 120 BPM is the most popular tempo because it is the most commonly used, not because it has any correlation with the popularity of the song as 120 is twice the amount of seconds in a minute. I also believe that there is a correlation between the general higher tempos and the popularity of a song. By analyzing the entire graph, I conclude that songs using a tempo between 70 BPM and 130 BPM are more likely to succeed.</p>
+    <br>
+    <h3>Graph 2:</h3>
+    <p>The second graph compares the frequency of songs with similar duration and popularity above 80%. The duration is rounded to the nearest 10 seconds to reduce the complexity of the dataset as in the original dataset it would be near impossible to match songs with the same millisecond duration.</p>
 </div>
+
+<img src="duration.png">
+
+<div class="container">
+    <p>The graph shows that 210 seconds is the most frequent duration with it occurring on 98 songs. The ten most common durations are between 160 and 250 seconds which is only a variation of 90 seconds. Based on the graph and the fact that every song above 80% popularity is within 10 seconds of only 29 different durations, I conclude that a song with a duration between 160 and 250 seconds or 2.7 and 4.2 minutes is more likely to become popular than a similar song with a longer or shorter duration. </p>
+    <br>
+    <h3>Graph 3:</h3>
+    <p></p>
+</div>
+
 <script>
     function addcode(text) {
         for (let i = 0; i < text.split("\n").length; i++) { 
