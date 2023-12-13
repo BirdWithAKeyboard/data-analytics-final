@@ -21,6 +21,10 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 5px #ddd;
 }
+img {
+    max-width: 100%;
+    max-height: 80vh;
+}
 </style>
 </head>
 <body>
@@ -35,21 +39,30 @@ body {
     Below is my Python program with comments highlighted in green explaining the function of each line of the code. You can access <a href="https://github.com/BirdWithAKeyboard/data-analytics-final/blob/main/graphing.py">the code from here</a> as well.  
     </p>
 </div>
+
 <div class="code"></div>
+
 <div class="container">
-    
+    <h2>Analysis of Data</h2>
+    <p>The first graph I made compares the frequency of songs with similar a tempo and popularity above 80%. The tempo is rounded to the nearest whole number to reduce the complexity of the dataset. The graph only shows the most frequent 100 tempos.</p>
+</div>
+
+<img src="./tempo.png">
+
+<div class="container">
+    <p>The graph shows that the most common tempo is 120 BPM with it occurring on 42 songs above 80% popularity. The top ten most common tempos are between 94 BPM and 130 BPM which is only a difference of 36 BPM. I believe that 120 BPM is the most popular tempo because it is the most commonly used, not because it has any correlation with the popularity of the song as 120 is twice the amount of seconds in a minute. I also believe that there is a correlation between the general higher tempos and the popularity of a song. By analyzing the entire graph, I conclude that songs using a tempo between 70 BPM and 130 BPM are more likely to succeed.</p>
 </div>
 <script>
     function addcode(text) {
         for (let i = 0; i < text.split("\n").length; i++) { 
-            var line = text.split("\n")[i];
+            var line = text.replaceAll("	", "    ").split("\n")[i];
             if (line[0] == (" ")) {
                 if (line.trim()[0] == ("#")) {
-                    line = '<span style="color: green;">'+line+'</span>';
+                    line = '<span style="color: #00b500;">'+line+'</span>';
                 }
                 line = '<span style="margin-left:'+40*(line.split("    ").length-1)+'px;">'+line+'</span>';
             } else if (line.trim()[0] == ("#")) {
-                line = '<span style="color: green;">'+line+'</span>';
+                line = '<span style="color: #00b500;">'+line+'</span>';
             }
             document.getElementsByClassName("code")[0].innerHTML += "<br>"+line;
         }
